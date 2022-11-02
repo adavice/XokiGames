@@ -691,7 +691,7 @@ h3.game_title {
 
 .view-eighth .mask {
 	display: flex;
-	background: linear-gradient(0deg, #350636db 0%, rgba(53, 6, 54, 0) 100%);
+	background: linear-gradient(0deg, #350636db 0%, rgba(53, 6, 54, 0.603) 80%, rgba(53, 6, 54, 0) 100%);
 	top: 0;
 	bottom: 0;
 	-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
