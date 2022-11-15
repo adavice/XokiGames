@@ -124,24 +124,24 @@
     </nav>
 </div>
 <!-- banner -->
-<div class="contact-agileinfo">
+<div class="contact-agileinfo main_background_2">
     <div class="container">
         <h2>Login</h2>
 
         <div class="col-md-12 contact-right-ltpwr framed">
-            <p class="form_descr"><i class="round_num">1.</i>Enter the email address you entered when registering which serves as your login and your password.</p>
+            <p class="form_descr">Enter the email address you entered when registering which serves as your login and your password.</p>
             <form id="home-option1-form" role="form">
                 <div class="row">
                     <div class="row">
                             <div class="form-group col-sm-4">
-                                <label for="home-option1-email-input">Email</label>
+                                <label class="editor-field__label" for="home-option1-email-input">Email</label>
                                 <div>
                                     <input type="email" class="form-control required input form-input" pattern=".{6,}" name="home-option1-email-input" id="home-option1-email-input" placeholder="Email" required="">
                                 </div>
                             </div>
 
                             <div class="form-group col-sm-4">
-                                <label for="home-option1-password-input">Password</label>
+                                <label class="editor-field__label" for="home-option1-password-input">Password</label>
                                 <div>
                                     <input type="password" class="form-control required input form-input" name="home-option1-password-input" id="home-option1-password-input" placeholder="Password" required="">
                                 </div>
@@ -162,12 +162,12 @@
         </div>
 
         <div class="col-md-12 contact-right-ltpwr framed">
-            <p class="form_descr"><i class="round_num">2.</i>Forgot your login details? Enter your email to recover your password.</p>
+            <p class="form_descr">Forgot your login details? Enter your email to recover your password.</p>
             <form id="home-option3-form" role="form">
                 <div class="row">
                     <div class="col-lg-8 col-sm-8">
                         <div class="form-group">
-                            <label for="home-option3-email-input">Email</label>
+                            <label class="editor-field__label" for="home-option3-email-input">Email</label>
                             <div>
                                 <input type="email" class="form-control required input form-input" pattern=".{6,}" name="home-option3-email-input" id="home-option3-email-input" placeholder="Email" required="">
                             </div>
@@ -189,28 +189,21 @@
 </div>
 <!-- footer -->
 <div class="footer">
-
     <div class="container">
         <div class="col-md-3 footer-left-ltpwr">
             <h4>Contact</h4>
             <ul>
                 <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></li>
-                <li><a href="mailto:example@mail.com"><h6>support@lootpower.com</h6></a></li>
-            </ul>
-            <ul>
-                <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></li>
-                <li><a href="https://wa.me/35795158557"><h6>Support: +357 95158557</h6></a></li>
-            </ul>
-            <ul>
-                <li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></li>
-                <li><h6>P.O. BOX 24547, CY-1301, Nicosia</h6></li>
+                <li><a href="mailto:support@xokigames.com">
+                        <h6>support@xokigames.com</h6>
+                    </a></li>
             </ul>
             <!--<ul>
-                <li><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span></li>
-                <li><h6>(0033)6544 5453 644</h6></li>
-            </ul>-->
+            <li><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span></li>
+            <li><h6>(0033)6544 5453 644</h6></li>
+        </ul>-->
         </div>
-        <div class="col-md-5 footer-middle-ltpwr">
+        <div class="col-md-9 footer-middle-ltpwr">
             <h4>Latest Games</h4>
             <div class="col-md-3 img-ltpwr-agile">
                 <a href="game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
@@ -224,25 +217,10 @@
             <div class="col-md-3 img-ltpwr-agile">
                 <a href="game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
             </div>
-            <div class="col-md-3 img-ltpwr-agile footer-middle-wthree">
-                <a href="game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
-            </div>
-            <div class="col-md-3 img-ltpwr-agile footer-middle-wthree">
-                <a href="game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
-            </div>
-            <div class="col-md-3 img-ltpwr-agile footer-middle-wthree">
-                <a href="game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
-            </div>
-            <div class="col-md-3 img-ltpwr-agile footer-middle-wthree">
-                <a href="game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
-            </div>
+
             <div class="clearfix"></div>
         </div>
-        <div class="col-md-4 footer-right-ltpwr">
-            <a href="index.html"><img src="./images/xoki-lofo.png" alt=""></a>
-            <p>Lootpower is the ultimate creator and distributor of games designed for grown up players worldwide. </p>
-            <p class="agileinfo">Players turn to us for superior games and for reliable source of quality content.</p>
-        </div>
+
         <div class="clearfix"></div>
         <div class="links">
             <a href="contactus.html">Contact us</a>
@@ -250,10 +228,11 @@
             <a href="./terms.html">Terms &amp; Conditions</a>
             <a href="./faq.html">FAQ</a>
             <a href="./refund.html">Refund Policy</a>
-            <a href="./sub_terms.html">Subscription Terms</a>
         </div>
         <div class="copyright">
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> XokiGames All Rights Reserved</p>
+            <p>&copy;
+                <script>document.write(new Date().getFullYear())</script> XokiGames All Rights Reserved
+            </p>
         </div>
     </div>
 </div>

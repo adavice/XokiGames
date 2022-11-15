@@ -95,7 +95,7 @@ form.cardForm {
 form .input {
     width: 100%;
     padding: 10px;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--secondary);
     margin-bottom: 10px;
     background: transparent;
     outline: none;

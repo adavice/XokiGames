@@ -7,10 +7,15 @@
 	--secondary: rgba(9, 242, 234, 1);
 	--bright: rgba(9, 242, 234, 1);
 	--main-text: #fff;
-	--highlight: #ffba28;
+	--highlight: rgba(9, 242, 234, 1);
 	--high_grad: linear-gradient(45deg, #ff6600, #ffd270);
 	--medium_grad: linear-gradient(45deg, #394d79, #091555);
 	--ambient_grad: linear-gradient(90deg, #1d1d1d, #202d4a);
+	--pink: #DD0386;
+}
+
+a:hover {
+	color: #DD0386;
 }
 
 .mob_only {
@@ -114,8 +119,8 @@ h3 {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	height: 3px;
-	background: var(--high_grad);
+	height: 1px;
+	background: var(--pink);
 	z-index: 20;
 }
 
@@ -157,14 +162,13 @@ img {
 	position: absolute;
 	z-index: 99999;
 	min-height: 87px;
-	background: var(--ambient_grad);
+	/*background: var(--ambient_grad);*/
 	background-repeat: repeat-x;
 	border: none;
 	border-radius: 0;
 	width: 100%;
 	padding: 10px 0;
 	border-bottom: 1px solid var(--high_grad);
-
 }
 
 .squire {
@@ -173,24 +177,18 @@ img {
 }
 
 .superheader {
-	filter: hue-rotate(45deg);
-	-webkit-transition: all .3s cubic-bezier(.23, 1, .32, 1) 0s;
-	transition: all .3s cubic-bezier(.23, 1, .32, 1) 0s;
 	content: "";
 	display: block;
 	width: 100%;
 	height: 100%;
-	position: absolute;
-	opacity: 0.4;
 	left: 0;
 	top: 0;
-	background-image: url(../images/header-primary-lines.png), url(../images/header-background.png);
-	background-size: 665px 100%;
-
-	animation: aether-background 180s linear 0s infinite;
+	background: url(../images/4709150.png), rgba(0, 7, 22, 0.5) no-repeat 0px 0px;
+	/*animation: aether-background 180s linear 0s infinite;*/
 	position: absolute;
 	z-index: -1;
-	transition: opacity 0.3s;
+
+	background-blend-mode: darken;
 }
 
 .navbar:hover .superheader {
@@ -208,7 +206,7 @@ img {
 /*	}*/
 /*}*/
 
-@keyframes aether-background {
+/*@keyframes aether-background {
 	0% {
 		background-position: 0 50%, 0 50%, 0 50%
 	}
@@ -216,7 +214,7 @@ img {
 	to {
 		background-position: -1300px 50%, -665px 50%, 0% 50%
 	}
-}
+}*/
 
 .main .navbar {
 	background: transparent;
@@ -409,21 +407,29 @@ ul.callbacks_tabs.callbacks1_tabs {
 .team-ltpwrlayouts h3,
 .gallery-ltpwrlayouts h2,
 .contact-agileinfo h2,
-.events-ltpwrlayouts h2 {
+.events-section2-agileinfo h2 {
 	font-size: 40px;
 	color: #fff;
 	margin-bottom: 40px;
 }
 
 .trend-ltpwrlayouts h2,
-.new-ltpwr-agile h3 {
+.new-ltpwr-agile h3,
+.about-agileinfo h2,
+.gallery-ltpwrlayouts h2,
+.events-section2-agileinfo h2,
+.contact-agileinfo h2 {
 	text-transform: uppercase;
 	text-align: left;
 	position: relative;
 }
 
 .trend-ltpwrlayouts h2:before,
-.new-ltpwr-agile h3:before {
+.new-ltpwr-agile h3:before,
+.about-agileinfo h2:before,
+.gallery-ltpwrlayouts h2:before,
+.events-section2-agileinfo h2:before,
+.contact-agileinfo h2:before {
 	content: "";
 	display: block;
 	position: absolute;
@@ -441,7 +447,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 			80px 10px,
 			0px 10px);
 	transform: rotate(180deg);
-	top: 45px;
+	top: 50px;
 }
 
 .gallery-grids {
@@ -529,20 +535,49 @@ ul.callbacks_tabs.callbacks1_tabs {
 /*--new games--*/
 .button {
 	/*font-size: 16px;*/
-	font-weight: 600;
-	background: var(--secondary);
-	color: var(--main-text);
 	margin: 20px auto 30px;
 	padding: 8px;
-	border-radius: 8px;
-	display: block;
 	min-width: 100px;
 	max-width: 220px;
 	text-align: center;
-	box-shadow: 0 5px 5px #00000033;
-	font-family: "Kaushan Script", sans-serif;
 	min-width: 100px;
+	color: #dd0386 !important;
+	display: inline-block;
+	font-family: 'Chakra Petch', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	border: 0;
+	background: linear-gradient(45deg, transparent 5%, #09F2EA 5%) !important;
+	outline: transparent;
+	position: relative;
+	filter: drop-shadow(0px 0px 10px #09F2EA);
+	border-radius: 0px !important;
 }
+
+.button::after {
+	--slice-0: inset(50% 50% 50% 50%);
+	--slice-1: inset(80% -6px 0 0);
+	--slice-2: inset(50% -6px 30% 0);
+	--slice-3: inset(10% -6px 85% 0);
+	--slice-4: inset(40% -6px 43% 0);
+	--slice-5: inset(80% -6px 5% 0);
+	content: 'Learn More';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(45deg, transparent 5%, #09F2EA 5%);
+	text-shadow: -3px -3px 0px #dd0386, 3px 3px 0px #00e6f6;
+	clip-path: var(--slice-0);
+}
+
+.button:hover::after {
+	animation: 1s glitch;
+	animation-timing-function: steps(2, end);
+}
+
 
 .button.underline {
 	background: var(--primary);
@@ -550,11 +585,11 @@ ul.callbacks_tabs.callbacks1_tabs {
 }
 
 .button.underline:hover {
-	background: var(--primary);
+	/*background: var(--primary);*/
 }
 
 .btn-primary {
-	background: var(--secondary);
+	/*background: var(--secondary);*/
 	max-width: 280px;
 	width: 100%;
 }
@@ -593,12 +628,18 @@ form .row {
 
 .form-control {
 	height: 40px;
+	float: left;
+	margin: 0 10px 25px 0;
+	padding: 15px 10px;
+	background-color: transparent;
+	border: 1px solid var(--bright);
+	border-radius: 0px;
 }
 
 .button:hover {
-	background: var(--high_grad);
+	/*background: var(--high_grad);
 	color: #fff;
-	text-shadow: 0 0 10px #fff;
+	text-shadow: 0 0 10px #fff;*/
 }
 
 h3.game_title {
@@ -705,8 +746,8 @@ h3.game_title {
 .flex_holder {
 	margin: auto;
 	margin-bottom: 20px;
-    margin-left: 0px;
-    text-align: left;
+	margin-left: 0px;
+	text-align: left;
 }
 
 
@@ -883,6 +924,39 @@ h3.game_title {
 }
 
 .service-grid-agileits a:hover::after {
+	animation: 1s glitch;
+	animation-timing-function: steps(2, end);
+}
+
+.contact-right-ltpwr input.more_btn {
+	float: right;
+	padding: 15px;
+	background-color: transparent;
+	/*border: 2px solid var(--bright);*/
+	outline: transparent;
+	color: #DD0386;
+}
+
+.contact-right-ltpwr input.more_btn::after {
+	--slice-0: inset(50% 50% 50% 50%);
+	--slice-1: inset(80% -6px 0 0);
+	--slice-2: inset(50% -6px 30% 0);
+	--slice-3: inset(10% -6px 85% 0);
+	--slice-4: inset(40% -6px 43% 0);
+	--slice-5: inset(80% -6px 5% 0);
+	content: 'Send Message';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(45deg, transparent 5%, #09F2EA 5%);
+	text-shadow: -3px -3px 0px #dd0386, 3px 3px 0px #00e6f6;
+	clip-path: var(--slice-0);
+}
+
+.contact-right-ltpwr input.more_btn:hover::after {
 	animation: 1s glitch;
 	animation-timing-function: steps(2, end);
 }
@@ -1142,7 +1216,7 @@ p.agileinfo {
 
 /*-- sub-banner --*/
 .sub-banner {
-	background: url(../images/banner3.jpg) no-repeat 0px 0px;
+	/*background: url(../images/banner3.jpg) no-repeat 0px 0px;*/
 	min-height: 87px;
 	background-size: cover;
 }
@@ -1155,7 +1229,6 @@ p.agileinfo {
 }
 
 .about-grid-left-agileits-ltpwrlayouts ul li {
-
 	display: block;
 	margin-bottom: 2em;
 	font-size: 14px;
@@ -1206,9 +1279,9 @@ p.agileinfo {
 	text-align: left;
 	max-width: 80%;
 	display: block;
-	margin-left: auto;
+	margin-left: 20px;
 	margin-right: auto;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 
 form input::-webkit-outer-spin-button,
@@ -1221,6 +1294,7 @@ input::-webkit-inner-spin-button {
 	height: 40px;
 	width: 100%;
 	max-width: 315px;
+	margin: 25px auto 30px;
 }
 
 .login_page .contact-right-ltpwr {
@@ -1256,7 +1330,7 @@ input::-webkit-inner-spin-button {
 .button.btn-secondary {
 	background: #fff;
 	color: var(--secondary);
-	border: 1px solid var(--secondary);
+	/*border: 1px solid var(--secondary);*/
 }
 
 .contact-agileinfo {
@@ -1277,13 +1351,11 @@ input::-webkit-inner-spin-button {
 
 .contact-agileinfo p {
 	color: #fff;
-
-
+	text-align: left;
 }
 
 .about-grid-right-ltpwr-agile img {
-	padding: .5em;
-	border: 1px dotted #999;
+	border: 2px solid rgba(9, 242, 234, 1);
 }
 
 .link {
@@ -1818,7 +1890,9 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 
 /*-- gallery --*/
 .gallery-ltpwrlayouts {
-	background-color: var(--ambient_grad);
+	/*background-color: var(--ambient_grad);*/
+	background: url(../images/4709150.png), rgba(0, 7, 22, 0.5) no-repeat 0px 0px;
+	background-blend-mode: darken;
 }
 
 .gallery-grids {
@@ -2014,8 +2088,8 @@ p.agileits {
 }
 
 .blog-text-ltpwrls h4 {
-	color: var(--primary);
-	font-size: 35px;
+	color: var(--secondary);
+	font-size: 24px;
 	text-align: left;
 	font-weight: 400;
 	transition: 0.5s all;
@@ -2030,13 +2104,13 @@ p.agileits {
 }
 
 .item_info {
-	border: 1px solid #ddd;
 	padding: 0.5em 2em;
+	padding-left: 0;
 	margin: 2.2em 0;
 }
 
 .item_info ul li i {
-	color: #8a8a8a;
+	color: var(--secondary);
 	margin-right: 15px;
 }
 
@@ -2045,12 +2119,12 @@ p.agileits {
 	font-size: 1.1em;
 	margin-right: 27px;
 	vertical-align: middle;
-	color: #777;
+	color: var(--secondary);
 	list-style: none;
 }
 
 .item_info ul li a {
-	color: #777;
+	color: var(--secondary);
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
 	-moz-transition: 0.5s all;
@@ -2148,12 +2222,11 @@ form .form-hint b {
 	fill: #fff;
 	-webkit-filter: drop-shadow(0px 0px 3px var(--bright));
 	filter: drop-shadow(0px 0px 3px var(--bright));
-
 }
 
 
 .blog-text-ltpwrls p {
-	color: #999;
+	color: #fff;
 	font-size: 14px;
 	text-align: left;
 	line-height: 30px;
@@ -2190,7 +2263,7 @@ a.blog-read:hover {
 	font-size: 21px;
 	text-align: left;
 	margin-bottom: 13px;
-	color: var(--highlight);
+	color: var(--secondary);
 	font-weight: 700;
 }
 
@@ -2219,35 +2292,18 @@ a.blog-read:hover {
 
 .contact-right-ltpwr input.text,
 .contact-right-ltpwr textarea {
-	width: 48.2%;
+	width: 100%;
 	float: left;
 	margin: 0 10px 25px 0;
 	padding: 15px 10px;
 	background-color: transparent;
-	border: none;
-	border-left: 1px solid var(--bright);
-	border-bottom: 1px solid var(--bright);
+	border: 1px solid var(--bright);
 	outline: transparent;
 }
 
 .contact-right-ltpwr textarea {
 	width: 100%;
 	height: 125px;
-}
-
-.contact-right-ltpwr input.more_btn {
-	float: right;
-	padding: 7px 15px;
-	background-color: transparent;
-	border: 2px solid var(--bright);
-	outline: transparent;
-	color: var(--bright);
-}
-
-.contact-right-ltpwr input.more_btn:hover {
-	color: #FFf;
-	border: 2px solid var(--secondary);
-	background: var(--secondary);
 }
 
 ::-webkit-input-placeholder {
@@ -2318,7 +2374,7 @@ a.blog-read:hover {
 }
 
 .agileits_breadcrumbs_right h3 {
-	font-size: 2em;
+	font-size: 24px;
 	color: #212121;
 	font-weight: 700;
 }
@@ -2361,31 +2417,31 @@ a.blog-read:hover {
 
 .wthree_blog_left_grid ul li {
 	display: inline-block;
-	color: #8a8a8a;
+	color: var(--secondary);
 	line-height: 30px;
 }
 
 .wthree_blog_left_grid ul li a {
 	display: inline-block;
-	color: #212121;
+	color:  var(--secondary);
 }
 
 .wthree_blog_left_grid ul li span {
-	color: #8a8a8a;
+	color: var(--secondary);
 	padding-right: 1em;
 }
 
 .wthree_blog_left_grid p {
 	text-align: left;
 	line-height: 27px;
-	color: #999;
+	color: var(--main-text);
 	font-size: 14px;
 }
 
 .wthree_blog_left_grid p i {
 	display: block;
 	margin: 1em 0;
-	color: #999;
+	color: var(--main-text);
 	text-align: left;
 }
 
@@ -2451,10 +2507,11 @@ a.blog-read:hover {
 select {
 	width: 100%;
 	padding: 10px;
-	border: 1px solid var(--primary);
+	border: 1px solid var(--secondary);
 	margin-bottom: 10px;
 	background: transparent;
 	outline: none;
+	color: var(--secondary);
 }
 
 .agileits_reply input[name="expMonth"],
@@ -2495,7 +2552,7 @@ select:focus {
 .agileits_reply textarea {
 	width: 100%;
 	padding: 10px;
-	border: 1px solid var(--primary);
+	border: 1px solid var(--secondary);
 	margin-bottom: 15px;
 	height: 150px;
 	resize: none;
@@ -2505,25 +2562,22 @@ select:focus {
 
 .agileits_reply input[type="submit"] {
 	padding: 10px 35px;
-	border: 2px solid var(--secondary);
 	color: var(--secondary);
 	background: var(--main-text);
 	outline: none;
 	min-width: 200px;
-
 }
 
 .agileits_reply input[type="submit"]:hover {
-	border: 2px solid var(--secondary);
-	color: var(--secondary);
-	background: var(--main-text);
+	/*color: var(--secondary);
+	background: var(--main-text);*/
 }
 
 .ltpwrls_search input[type="text"] {
 	outline: none;
 	padding: 10px;
-	background: #f5f5f5;
-	border: 1px solid #E1E1E1;
+background-color: transparent;
+    border: 1px solid var(--bright);
 	color: #212121;
 	font-size: 14px;
 	width: 80%;
@@ -2532,7 +2586,7 @@ select:focus {
 .ltpwrls_search input[type="submit"] {
 	outline: none;
 	padding: 10px;
-	background: url(../images/img-sp.png) no-repeat 26px -392px rgb(2, 24, 136);
+	background: url(../images/img-sp.png) no-repeat 26px -392px var(--pink);
 	border: none;
 	width: 19%;
 }
@@ -2550,12 +2604,12 @@ select:focus {
 	text-transform: capitalize;
 	font-family: 'Poppins', sans-serif;
 	text-align: left;
-	color: #999;
+	color: var(--main-text);
 	font-size: 14px;
 }
 
 .ltpwrl_categories ul li a {
-	color: #999;
+	color: var(--main-text);
 	text-decoration: none;
 	line-height: 1.8em;
 	font-size: 14px;
@@ -2599,9 +2653,13 @@ select:focus {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	background: linear-gradient(45deg, #e25a31, #d8ad12);
+	color: var(--bright);
+    background: url(../images/cyberpunk-animated-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 	padding: 50px 30px;
 	margin-top: 65px;
+	border: 2px solid rgba(9, 242, 234, 1);
 }
 
 .benefit {
@@ -2618,7 +2676,11 @@ select:focus {
 
 .new_games {
 	position: relative;
-	background: linear-gradient(to bottom, var(--darker), rgba(0, 0, 0, .5), var(--darker)), url(../images/new_games.jpg);
+	/*background: linear-gradient(to bottom, var(--darker), rgba(0, 0, 0, .5), var(--darker)), url(../images/new_games.jpg);
+	background-size: cover;*/
+
+	background: url(../images/cyberpunk-background.png);
+	background-repeat: no-repeat;
 	background-size: cover;
 }
 
@@ -2698,14 +2760,19 @@ select:focus {
 	box-sizing: border-box;
 	white-space: nowrap;
 	padding: 8px;
-	background: var(--darker);
-	color: var(--main-text);
-	border-radius: 7px;
-	border: 1px solid var(--darker);
+	background: transparent;
+	color: var(--secondary);
+	/*border-radius: 7px;*/
+	border: none;
 }
 
 .sorter li.active {
-	border: 1px solid var(--highlight);
+	background: linear-gradient(to right, var(--secondary) 2px, transparent 2px) 0 0, linear-gradient(to right, var(--secondary) 2px, transparent 2px) 0 100%, linear-gradient(to left, var(--secondary) 2px, transparent 2px) 100% 0, linear-gradient(to left, var(--secondary) 2px, transparent 2px) 100% 100%, linear-gradient(to bottom, var(--secondary) 2px, transparent 2px) 0 0, linear-gradient(to bottom, var(--secondary) 2px, transparent 2px) 100% 0, linear-gradient(to top, var(--secondary) 2px, transparent 2px) 0 100%, linear-gradient(to top, var(--secondary) 2px, transparent 2px) 100% 100%;
+	background-repeat: no-repeat;
+	background-size: 10px 10px;
+	height: fit-content;
+	filter: drop-shadow(0px 0px 12px #00D5CD);
+	color: var(--secondary);
 }
 
 li>a {
@@ -2777,21 +2844,29 @@ li>a {
 	line-height: 1.42857143;
 	color: var(--bright);
 	text-decoration: none;
-	background-color: unset;
-	border: 1px solid var(--primary);
+	background-color: transparent;
+	/*border: 1px solid var(--primary);*/
+	border: none;
 }
 
 .pagination>li>a:hover,
-.pagination>li>span:hover {
-	background: var(--secondary);
-	color: var(--main-text);
-	text-shadow: 0 0 10px #fff;
+.pagination>li>span:hover,
+.pagination>li>a:focus,
+.pagination>li>span:focus,
+.pagination>li>a:active,
+.pagination>li>span:active {
+	text-shadow: 0 0 10px var(--bright) !important;
+	color: var(--bright) !important;
+	background-color: transparent !important;
 }
 
 .pagination>li>a.active {
-	background: var(--secondary);
-	color: var(--main-text);
-	text-shadow: 0 0 10px #fff;
+	background: linear-gradient(to right, var(--secondary) 2px, transparent 2px) 0 0, linear-gradient(to right, var(--secondary) 2px, transparent 2px) 0 100%, linear-gradient(to left, var(--secondary) 2px, transparent 2px) 100% 0, linear-gradient(to left, var(--secondary) 2px, transparent 2px) 100% 100%, linear-gradient(to bottom, var(--secondary) 2px, transparent 2px) 0 0, linear-gradient(to bottom, var(--secondary) 2px, transparent 2px) 100% 0, linear-gradient(to top, var(--secondary) 2px, transparent 2px) 0 100%, linear-gradient(to top, var(--secondary) 2px, transparent 2px) 100% 100%;
+	background-repeat: no-repeat;
+	background-size: 10px 10px;
+	height: fit-content;
+	filter: drop-shadow(0px 0px 12px #00D5CD);
+	color: var(--secondary);
 }
 
 .game_name {
@@ -2846,7 +2921,7 @@ li>a {
 }
 
 #faq h2 {
-	margin-bottom: 0;
+	/*margin-bottom: 0;*/
 }
 
 #faq h4 {
@@ -3328,10 +3403,6 @@ li>a {
 		width: 32%;
 	}
 
-	.blog-text-ltpwrls h4 {
-		color: #333;
-	}
-
 	.events-text-ltpwr-agile p {
 		font-size: 25px;
 	}
@@ -3349,7 +3420,7 @@ li>a {
 	}
 
 	.ltpwrls_search input[type="submit"] {
-		background: url(../images/img-sp.png) no-repeat 18px -392px rgb(2, 24, 136);
+		background: url(../images/img-sp.png) no-repeat 18px -392px var(--pink);
 	}
 
 	.ltpwrls_search input[type="submit"]:hover {
@@ -3390,8 +3461,8 @@ li>a {
 	.team-ltpwrlayouts h3,
 	.gallery-ltpwrlayouts h2,
 	.contact-agileinfo h2,
-	.events-ltpwrlayouts h2 {
-		font-size: 35px;
+	.events-section2-agileinfo h2 {
+		font-size: 31px;
 	}
 
 	.trend-ltpwrlayouts h4,
@@ -3635,7 +3706,7 @@ li>a {
 	}
 
 	.contact-right-ltpwr input.text {
-		width: 47.7%;
+		width: 100%;
 	}
 
 	.map iframe {
@@ -3654,7 +3725,7 @@ li>a {
 	}
 
 	.ltpwrls_search input[type="submit"] {
-		background: url(../images/img-sp.png) no-repeat 12px -392px rgb(2, 24, 136);
+		background: url(../images/img-sp.png) no-repeat 12px -392px var(--pink);
 		width: 18%;
 	}
 
@@ -3833,8 +3904,9 @@ li>a {
 	.collection-grid-4,
 	.collection-grid-5,
 	.collection-grid-6 {
-		width: 33.3%;
-		float: left;
+		width: 92%;
+		display: block;
+		margin: 10px auto;
 	}
 
 	.collection-text img {
@@ -3850,11 +3922,11 @@ li>a {
 	}
 
 	.contact-right-ltpwr input.text {
-		width: 47.6%;
+		width: 100%;
 	}
 
 	.ltpwrls_search input[type="submit"] {
-		background: url(../images/img-sp.png) no-repeat 10px -392px rgb(2, 24, 136);
+		background: url(../images/img-sp.png) no-repeat 10px -392px var(--pink);
 	}
 
 	.ltpwrls_search input[type="submit"]:hover {
@@ -3871,7 +3943,7 @@ li>a {
 	}
 
 	.wthree_blog_left_grid ul li span {
-		color: #8a8a8a;
+		color: var(--secondary);
 		padding-right: 0.7em;
 	}
 
@@ -4055,7 +4127,7 @@ li>a {
 	}
 
 	.ltpwrls_search input[type="submit"] {
-		background: url(../images/img-sp.png) no-repeat 7px -392px rgb(2, 24, 136);
+		background: url(../images/img-sp.png) no-repeat 7px -392px var(--pink);
 	}
 
 	.ltpwrls_search input[type="submit"]:hover {
@@ -4063,7 +4135,7 @@ li>a {
 	}
 
 	.wthree_blog_left_grid ul li span {
-		color: #8a8a8a;
+		color: var(--secondary);
 		padding-right: 0.3em;
 	}
 
@@ -4093,6 +4165,7 @@ li>a {
 
 	.about-grid-right-ltpwr-agile {
 		padding-left: 0;
+		margin-top: 20px;
 	}
 
 	.footer h4 {
@@ -4167,7 +4240,7 @@ li>a {
 	}
 
 	.ltpwrls_search input[type="submit"] {
-		background: url(../images/img-sp.png) no-repeat 4px -388px rgb(2, 24, 136);
+		background: url(../images/img-sp.png) no-repeat 4px -388px var(--pink);
 		background-size: 495px;
 	}
 
@@ -4234,8 +4307,8 @@ li>a {
 	.team-ltpwrlayouts h3,
 	.gallery-ltpwrlayouts h2,
 	.contact-agileinfo h2,
-	.events-ltpwrlayouts h2 {
-		margin-bottom: 30px;
+	.events-section2-agileinfo h2 {
+		margin-bottom: 45px;
 	}
 
 	.gallery-grids {
@@ -4251,7 +4324,7 @@ li>a {
 
 	.about-grid-left-agileits-ltpwrlayouts ul li {
 		display: block;
-		margin-left: 25%;
+		/*margin-left: 25%;*/
 	}
 
 	.item_info ul li {
@@ -4399,7 +4472,7 @@ li>a {
 	}
 
 	.about-grid-left-agileits-ltpwrlayouts ul li {
-		margin-left: 21%;
+		/*margin-left: 21%;*/
 	}
 
 	.events-left-agile-agileits-ltpwrlayouts {
@@ -4495,8 +4568,8 @@ li>a {
 	.team-ltpwrlayouts h3,
 	.gallery-ltpwrlayouts h2,
 	.contact-agileinfo h2,
-	.events-ltpwrlayouts h2 {
-		font-size: 28px;
+	.events-section2-agileinfo h2 {
+		font-size: 24px;
 	}
 
 	.view h4 {
@@ -4529,8 +4602,8 @@ li>a {
 	.collection-grid-4,
 	.collection-grid-5,
 	.collection-grid-6 {
-		width: 50%;
-		float: left;
+		/*width: 50%;
+		float: left;*/
 	}
 
 	.ltpwrl_social_icons ul li a,
@@ -4773,8 +4846,8 @@ li>a {
 	.collection-grid-4,
 	.collection-grid-5,
 	.collection-grid-6 {
-		width: 100%;
-		float: left;
+		width: 92%;
+		/*float: left;*/
 	}
 
 	.collection-text img {
@@ -4819,7 +4892,7 @@ li>a {
 }
 
 .framed h4 {
-	color: #02b484;
+	color: var(--highlight);
 }
 
 .pop-up {
@@ -5080,10 +5153,10 @@ ul#flexiselDemo1 li .trend-grid {
 .new-border-3 .mask,
 .new-border-4 .mask {
 	padding: 0px;
-    width: calc(100% - 15px);
+	width: calc(100% - 15px);
 }
 
-.view a h4{
+.view a h4 {
 	font-size: 24px;
 }
 
@@ -5146,22 +5219,23 @@ ul#flexiselDemo1 li .trend-grid {
 		height: 300px;
 	}
 
-	.view .mask, .view .content{
+	.view .mask,
+	.view .content {
 		width: calc(100% - 5px);
 	}
 
-	.view a h4{
+	.view a h4 {
 		font-size: 16px;
 		height: auto;
 		margin: 0 15px;
 		text-align: left;
-		margin-bottom: 5px;	
+		margin-bottom: 5px;
 	}
 
-	.view p{
+	.view p {
 		font-size: 12px;
 	}
-	
+
 }
 
 @media screen and (max-width: 481px) {
@@ -5192,20 +5266,217 @@ ul#flexiselDemo1 li .trend-grid {
 		padding-top: 0px;
 	}
 
-	.view .mask, .view .content{
+	.view .mask,
+	.view .content {
 		width: 100%;
 	}
 
-	.view a h4{
+	.view a h4 {
 		font-size: 24px;
 		height: auto;
 		margin: 0 15px;
 		text-align: left;
-		margin-bottom: 5px;	
+		margin-bottom: 5px;
 	}
 
-	.view p{
+	.view p {
 		font-size: 16px;
 	}
-	
+
+}
+
+/*new style*/
+.about .main_background_2 .about-grids-ltpwr-agileits p {
+	margin-bottom: 2em;
+}
+
+.about .main_background_2 li {
+	list-style: decimal;
+}
+
+.about .main_background_2 ul {
+	list-style: none;
+}
+
+.about .main_background_2 ul li:before {
+	content: "—";
+	position: relative;
+	left: -5px;
+}
+
+p.description {
+	margin-bottom: 0 !important;
+}
+
+@media screen and (max-width: 1080px) {
+	.about .main_background_2 .about-grids-ltpwr-agileits p {
+		margin-bottom: 1.6em;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.about .main_background_2 .about-grids-ltpwr-agileits p {
+		margin-bottom: 0.6em;
+	}
+}
+
+.text_link {
+	color: var(--secondary);
+}
+
+.text_link:hover,
+.text_link:focus,
+.text_link:active {
+	color: var(--secondary);
+	text-shadow: 0 0 10px var(--bright);
+}
+
+.collection-grid.collection-image {
+	border: 2px solid rgba(9, 242, 234, 1);
+}
+
+@media screen and (max-width: 481px) {
+	.navbar {
+		min-height: 77px;
+		padding-bottom: 0;
+		padding-top: 9px;
+	}
+}
+
+.about-agileinfo.main_background_2 {
+	background: linear-gradient(109.73deg, #160C20 2.97%, #2C1443 53.46%, #160C20 103.32%);
+}
+
+.games .flex_holder {
+	margin: auto;
+}
+
+.games .view h4 {
+	font-size: 24px;
+}
+
+.games .view-eighth p {
+	margin-bottom: 10px;
+}
+
+.games .flex_holder .button {
+	display: block;
+	margin: auto;
+	width: 70%;
+	padding: 10px;
+}
+
+.pagination>li:first-child>a,
+.pagination>li:first-child>span,
+.pagination>li:last-child>a,
+.pagination>li:last-child>span {
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.news .button {
+	padding: 15px;
+	font-size: 15px;
+}
+
+.news .main_background_2 {
+	background: linear-gradient(109.73deg, #160C20 2.97%, #2C1443 53.46%, #160C20 103.32%);
+}
+
+.events-section2-agileinfo img {
+	border: 30px solid var(--secondary);
+	border-left: 5px solid var(--secondary);
+	border-right: 5px solid var(--secondary);
+	border-bottom: 15px solid var(--secondary);
+	clip-path: polygon(0px 25px,
+			26px 0px,
+			calc(60% - 25px) 0px,
+			60% 25px,
+			100% 25px,
+			100% calc(100% - 10px),
+			calc(100% - 15px) calc(100% - 10px),
+			calc(80% - 10px) calc(100% - 10px),
+			calc(80% - 15px) calc(100% - 0px),
+			10px calc(100% - 0px),
+			0% calc(100% - 10px));
+	background-color: var(--secondary);
+}
+
+@media screen and (max-width: 481px) {
+	.events-section2-agileinfo img {
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+}
+
+.glyphicon {
+	color: var(--secondary);
+}
+
+.flex_form {
+	display: flex;
+}
+
+.editor-field__label {
+	position: relative;
+	display: block;
+	height: 16px;
+	width: 100px;
+	background: var(--secondary);
+	left: 0px;
+	color: var(--pink);
+	font-size: 9px;
+	text-transform: uppercase;
+	letter-spacing: 1.25px;
+	font-weight: 600;
+	padding: 0 24px 0 16px;
+	display: flex;
+	align-items: center;
+	clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 0% 100%);
+}
+
+.img-responsive,
+.thumbnail>img,
+.thumbnail a>img,
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+	border: 2px solid rgba(9, 242, 234, 1);
+}
+
+.btn-second {
+	margin-left: 15px;
+}
+
+.profile_page {
+	background: linear-gradient(109.73deg, #160C20 2.97%, #2C1443 53.46%, #160C20 103.32%);
+}
+
+.profile_page .button {
+	min-width: 245px;
+}
+
+.profile_page .button.underline {
+	margin-left: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+	.profile_page .button {
+		min-width: 100%;
+		margin: 20px auto;
+		margin-left: 0 !important;
+	}
+}
+
+@media screen and (max-width: 745px) {
+	.profile_page .button {
+		min-width: 100%;
+		margin: 20px auto;
+		margin-left: 0 !important;
+	}
+}
+
+.wrapBox {
+	padding-left: 20px;
 }
