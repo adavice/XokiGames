@@ -1050,7 +1050,6 @@ h3.game_title {
 }
 
 .wthree_info p {
-	text-transform: capitalize;
 	color: #fff;
 	/*letter-spacing: 2px;
 	font-style:italic;*/
@@ -1676,18 +1675,21 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 }
 
 .collection-grid.collection-image.collection-grid-2 {
-	background: url(../images/c4.jpg) no-repeat 0px 0px;
+	background: url(../images/img_1.png) no-repeat 0px 0px;
 	background-size: cover;
+	background-position: center;
 }
 
 .collection-grid.collection-image.collection-grid-4 {
-	background: url(../images/c3.jpg) no-repeat 0px 0px;
+	background: url(../images/img_2.png) no-repeat 0px 0px;
 	background-size: cover;
+	background-position: center;
 }
 
 .collection-grid.collection-image.collection-grid-6 {
-	background: url(../images/c2.jpg) no-repeat 0px 0px;
+	background: url(../images/img_3.png) no-repeat 0px 0px;
 	background-size: cover;
+	background-position: center;
 }
 
 /*-- //Collections --*/
@@ -5423,7 +5425,7 @@ p.description {
 	position: relative;
 	display: block;
 	height: 16px;
-	width: 100px;
+	width: 150px;
 	background: var(--secondary);
 	left: 0px;
 	color: var(--pink);
